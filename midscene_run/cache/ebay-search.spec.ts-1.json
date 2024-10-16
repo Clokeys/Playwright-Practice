@@ -1,0 +1,69 @@
+{
+  "pkgName": "@midscene/core",
+  "pkgVersion": "0.5.1",
+  "cacheId": "ebay-search.spec.ts-1",
+  "aiTasks": [
+    {
+      "prompt": "type \"Headphones\" in search box, hit Enter",
+      "tasks": [
+        {
+          "type": "plan",
+          "pageContext": {
+            "url": "https://www.ebay.com/",
+            "size": {
+              "width": 1280,
+              "height": 800
+            }
+          },
+          "prompt": "type \"Headphones\" in search box, hit Enter",
+          "response": {
+            "plans": [
+              {
+                "thought": "Locate the search box to input the search term.",
+                "type": "Locate",
+                "param": {
+                  "prompt": "The search box with placeholder 'Search for anything'."
+                }
+              },
+              {
+                "thought": "Input the search term 'Headphones' into the search box.",
+                "type": "Input",
+                "param": {
+                  "value": "Headphones"
+                }
+              },
+              {
+                "thought": "Press Enter to initiate the search.",
+                "type": "KeyboardPress",
+                "param": {
+                  "value": "Enter"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "locate",
+          "pageContext": {
+            "url": "https://www.ebay.com/",
+            "size": {
+              "width": 1280,
+              "height": 800
+            }
+          },
+          "prompt": "The search box with placeholder 'Search for anything'.",
+          "response": {
+            "elements": [
+              {
+                "reason": "The element with ID '4521831870' is a form item node with the placeholder 'Search for anything', matching the description.",
+                "text": "Search for anything",
+                "id": "4521831870"
+              }
+            ],
+            "errors": []
+          }
+        }
+      ]
+    }
+  ]
+}

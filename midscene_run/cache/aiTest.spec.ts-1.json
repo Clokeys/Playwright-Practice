@@ -1,0 +1,69 @@
+{
+  "pkgName": "@midscene/core",
+  "pkgVersion": "0.5.1",
+  "cacheId": "aiTest.spec.ts-1",
+  "aiTasks": [
+    {
+      "prompt": "type \"Jessica\" in Name search box, hit Enter",
+      "tasks": [
+        {
+          "type": "plan",
+          "pageContext": {
+            "url": "https://www.ag-grid.com/example/",
+            "size": {
+              "width": 1280,
+              "height": 800
+            }
+          },
+          "prompt": "type \"Jessica\" in Name search box, hit Enter",
+          "response": {
+            "plans": [
+              {
+                "thought": "The user wants to filter the grid by typing 'Jessica' in the Name search box and then hitting Enter. First, locate the Name search box.",
+                "type": "Locate",
+                "param": {
+                  "prompt": "The input field under the 'Name' column header with placeholder 'Filter...'"
+                }
+              },
+              {
+                "thought": "Input 'Jessica' into the located Name search box.",
+                "type": "Input",
+                "param": {
+                  "value": "Jessica"
+                }
+              },
+              {
+                "thought": "Press Enter to apply the filter.",
+                "type": "KeyboardPress",
+                "param": {
+                  "value": "Enter"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "locate",
+          "pageContext": {
+            "url": "https://www.ag-grid.com/example/",
+            "size": {
+              "width": 1280,
+              "height": 800
+            }
+          },
+          "prompt": "The input field under the 'Name' column header with placeholder 'Filter...'",
+          "response": {
+            "elements": [
+              {
+                "reason": "The element is an input field under the 'Name' column header with the placeholder 'Filter any column...'. This matches the description provided.",
+                "text": "Filter any column...",
+                "id": "ab3d1beda9"
+              }
+            ],
+            "errors": []
+          }
+        }
+      ]
+    }
+  ]
+}
